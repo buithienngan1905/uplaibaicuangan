@@ -1,0 +1,516 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/mimish-template-fullwidth.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Cửa Hàng | mimish - Cửa hàng hoa tươi cho người có gu!</title>
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/mimish-explorer.png">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+rel="stylesheet">
+<link rel="stylesheet" href="css/shop.css">
+<link rel="stylesheet" href="css/hover.css">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="modal" id="shopping-cart">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="">GIỎ HÀNG</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="cart-row d-flex"> <span class="cart-item cart-header cart-column">Sản phẩm</span> <span class="cart-price cart-header cart-column">Giá</span> <span class="cart-quantity cart-header cart-column"
+                >Số lượng</span
+              > </div>
+        <div class="cart-items"></div>
+        <div class="cart-total"> <strong class="cart-total-title">Tổng Cộng</strong> <span class="cart-total-price text-danger">0</span> VNĐ </div>
+        <button
+              class="btn btn-primary btn-purchase"
+              type="button"
+              onClick="thanhtoan()"
+            > Thanh toán </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Đóng Giỏ Hàng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--NAV BAR-->
+<div class="rounded-5">
+  <div id="main-navbar">
+    <div class="container py-1 fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-4 shadow-2 ps-3 ">
+        <div class="container">
+          <div class="col-sm-2 col-md-4 col-lg-3 "> <a class="navbar-brand hvr-forward" href="index.html"><img src="img/mimish-text-black.png" class="img-fluid" alt=""></a> </div>
+          <div class="justify-content-end align-items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons-outlined">menu</span></button>
+          </div>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+              <li class="nav-item"> <a class="nav-link active hvr-underline-from-center" style="font-size: 1.2rem" aria-current="page" href="store.html">Cửa Hàng</a> </li>
+              <li class="nav-item"> <a class="nav-link hvr-underline-from-center" style="font-size: 1.2rem" href="about.html">Về Chúng Tôi</a> </li>
+              <li class="nav-item"> <a class="nav-link hvr-underline-from-center" style="font-size: 1.2rem" href="#">Blog</a> </li>
+              <li class="nav-item"> <a class="nav-link hvr-underline-from-center" style="font-size: 1.2rem" href="#">Tin Tức</a> </li>
+              <li class="nav-item"> <a class="nav-link hvr-underline-from-center" style="font-size: 1.2rem" href="contact.html">Liên Hệ</a> </li>
+              <li class="nav-item"> <a class="nav-link hvr-underline-from-center  d-flex align-items-center" style="font-size: 1.2rem" href="#shopping-cart" data-bs-toggle="modal">Giỏ Hàng<span class="material-icons-round" style="font-size: 1.2rem;">shopping_cart</span><span style="font-size: 1.2rem;">(</span><span class="" id="sl">0</span><span style="font-size: 1.2rem">)</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--SLIDER BANNER-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="container">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active"> <img src="img/mimish-carousel-01.jpg" class="d-block w-100 img-fluid" alt="..."> </div>
+        <div class="carousel-item"> <img src="img/mimish-carousel-02.jpg" class="d-block w-100 img-fluid" alt="..."> </div>
+        <div class="carousel-item"> <img src="img/mimish-carousel-03.jpg" class="d-block w-100 img-fluid" alt="..."> </div>
+        <div class="carousel-item"> <img src="img/mimish-carousel-04.jpg" class="d-block w-100 img-fluid" alt="..."> </div>
+        <div class="carousel-item"> <img src="img/mimish-carousel-05.jpg" class="d-block w-100 img-fluid" alt="..."> </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"> <span class="material-icons-round" style="color:#ffd701;font-size:48px">arrow_back_ios</span> <span class="visually-hidden">Previous</span> </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"> <span class="material-icons-round" style="color:#ffd701;font-size:48px">arrow_forward_ios</span> <span class="visually-hidden">Next</span> </button>
+    </div>
+  </div>
+</div>
+<!--SLIDER BANNER--> 
+<!-- InstanceBeginEditable name="mimish-main-content" -->
+<main>
+<div class="section-2 position-relative" style="top:-30px" id="section-2">
+<div class="container rounded-4 bg-success about-us-bg" style="top:-50px">
+  <div class="mimish-store">
+    <div class="py-5 text-center" >
+      <div class="container">
+        <div class="row">
+          <div class="mx-auto col-12 ">
+            <h1 class="my-5">CỬA HÀNG | MIMISH</h1>
+          </div>
+          <div class="col-sm-12 mb-sm-3 col-md-12 mb-md-3 col-lg-4 hvr-grow-shadow pointer py-3">
+            <div class="store-head-1">
+              <div class="grid-text2 w-100 position-absolute">
+                <h3 class="pt-4 m-0 text-white d-block">Hoa Bó</h3>
+                <p class="text-black-70" style="font-size: 1.2rem">Hoa được bó bởi các nghệ nhân lành nghề</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 mb-sm-3 col-md-12 mb-md-3 col-lg-4 hvr-grow-shadow pointer py-3">
+            <div class="store-head-2">
+              <div class="grid-text2 w-100 position-absolute">
+                <h3 class="pt-4 m-0 text-white d-block">Hoa Trồng</h3>
+                <p class="text-black-70" style="font-size: 1.2rem">Khách hàng có thể trồng hoa theo sở thích</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12  mb-sm-3 col-md-12 mb-md-3 col-lg-4 hvr-grow-shadow pointer py-3">
+            <div class="store-head-3">
+              <div class="grid-text2 w-100 position-absolute">
+                <h3 class="pt-4 m-0 text-white d-block">Phụ Kiện Chăm Hoa</h3>
+                <p class="text-black-70" style="font-size: 1.2rem">Nhiều phụ kiện để chăm hoa tại gia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="py-5" >
+        <div class="row">
+          <div class="col-md-12 col-lg-12">
+            <ul class="breadcrumb ps-2" style="font-size: 22px">
+              <li class="breadcrumb-item"> <a href="index.html" style="text-decoration: none;color: black">Trang Chủ</a> </li>
+              <li class="breadcrumb-item">Cửa Hàng</li>
+              <li class="breadcrumb-item active">Ưu Đãi Của Tháng</li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-10">
+            <div class="row p-2">
+              <div class="col-md-12 col-lg-5 d-flex align-items-center">
+                <p><span class="material-icons border-left pointer" style="font-size:2rem">apps</span></p>
+                <p style="padding-right: 16px"><span class="material-icons border-right pointer"  style="font-size:2rem">sort</span></p>
+                <p style="font-size:1.5rem">Hiển thị 1-16 trong số 31 kết quả</p>
+              </div>
+              <div class="col-md-12 col-lg-7 d-flex justify-content-end align-items-center">
+                <p style="font-size:1.5rem; padding: 0 16px" class="border-around">Lọc theo: <span class="text-primary">Kí tự từ A đến Z</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-10">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-09.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Ngày Hạnh Phúc</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">349000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-10.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Thương Em!</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">529000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-12.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">My Sweeter</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">449000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-11.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Ngào Ngạt</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">299000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-13.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Tinh Khôi</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">450000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-15.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Đong Đầy</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">599000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-14.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Little Awww~</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">349000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-16.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Điều Bất Ngờ</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">569000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-08.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Charming</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">899000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-07.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Nở Rộ</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">609000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-06.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Sau Cơn Mưa</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">589000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-05.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Điều Xưa Cũ</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">429000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-04.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Kiêu Hãnh</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">619000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-03.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Rosa Rosé</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">529000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-02.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">LOVE EARTH</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">399000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-3">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-01.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Ngày Nắng Lên</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">449000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-12 d-flex justify-content-end">
+              <ul class="pagination">
+                <li class="page-item active"> <a class="page-link" href="#">1</a> </li>
+                <li class="page-item"> <a class="page-link" href="#">2</a> </li>
+                <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                <li class="page-item"> <a class="page-link" href="#"> <span class="material-icons" style="font-size:34px">play_arrow</span></a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-2">
+            <div class="">
+              <h3 style="text-align: left">SẢN PHẨM</h3>
+              <div class="col-12">
+                <ul style="display:block;font-size:1.2rem">
+                  <li style="text-align: left" class="pointer">Hoa Bó</li>
+                  <li style="text-align: left" class="pointer">Hoa Trồng</li>
+                  <li style="text-align: left" class="pointer">Hoa Sự Kiện</li>
+                  <li style="text-align: left" class="pointer">Hoa Dịp Lễ</li>
+                  <li style="text-align: left" class="pointer">Hoa Của Tháng</li>
+                  <li style="text-align: left" class="pointer">Hoa Ưu Đãi</li>
+                  <li style="text-align: left" class="pointer">Phụ Kiện</li>
+                  <li style="text-align: left" class="pointer">Khác...</li>
+                </ul>
+                </p>
+              </div>
+              <div class="row px-3 py-1">
+                <hr class="border- border-primary text-grey w-100">
+              </div>
+            </div>
+            <div class="">
+              <h3 style="text-align: left">MỨC GIÁ</h3>
+              <div class="col-12">
+                <ul style="display:block;font-size:1.2rem">
+                  <li style="text-align: left"  class="pointer">49K-99K</li>
+                  <li style="text-align: left" class="pointer">100K-199K</li>
+                  <li style="text-align: left" class="pointer">200K-399K</li>
+                  <li style="text-align: left" class="pointer">400K-599K</li>
+                  <li style="text-align: left" class="pointer">600K-799K</li>
+                  <li style="text-align: left" class="pointer">800K-999K</li>
+                  <li style="text-align: left" class="pointer">>1.000K</li>
+                </ul>
+                </p>
+              </div>
+              <div class="row px-3 py-1">
+                <hr class="border- border-primary text-grey w-100">
+              </div>
+            </div>
+            <div class="">
+              <h3 style="text-align: left">MÀU SẮC HOA</h3>
+              <div class="col-12">
+                <ul style="display:block;font-size:1.2rem;list-style: none" class="pointer">
+                  <li style="text-align: left;color:red"><span class="material-icons"> fiber_manual_record </span></li>
+                  <li style="text-align: left;color:yellow"><span class="material-icons"> fiber_manual_record </span></li>
+                  <li style="text-align: left;color:purple"><span class="material-icons"> fiber_manual_record </span></li>
+                  <li style="text-align: left;color:green"><span class="material-icons"> fiber_manual_record </span></li>
+                  <li style="text-align: left;color:blue"><span class="material-icons"> fiber_manual_record </span></li>
+                  <li style="text-align: left;color:orange"><span class="material-icons"> fiber_manual_record </span>
+                </ul>
+                </p>
+              </div>
+              <div class="row px-3 py-1">
+                <hr class="border- border-primary text-grey w-100">
+              </div>
+            </div>
+            <div class="">
+              <h3 style="text-align: left">SẢN PHẨM BẠN VỪA XEM</h3>
+              <div class="col-12">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-09.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Ngày Hạnh Phúc</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">349000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+              <div class="py-3"></div>
+              <div class="py-1"></div>
+              <div class="col-12">
+                <div class="product-box rounded-3 shadow-3 hvr-grow pointer item pb-3"> <img class="img-fluid d-block rounded-3-top shop-item-image" src="img/product-07.jpeg" alt="...">
+                  <h3 class="pt-4 m-0 shop-item-title text-center">Nở Rộ</h3>
+                  <div class="d-flex justify-content-center">
+                    <div class="product-price d-flex align-items-end">
+                      <h3 class="text-primary shop-item-price">609000<span style=" color:black; font-size: 1.2rem">VNĐ</span></h3>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary shop-item-button">Mua ngay</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<!-- InstanceEndEditable -->
+<footer class="bg-black text-light rounded-7 pt-5">
+  <div class="container pt-5">
+    <div class="row align-items-start">
+      <div class="col-md-12 col-lg-5 py-3">
+        <div class="bottom-logo"><img src="img/mimish.png" alt="" class="img-fluid"></div>
+        <p class="pe-5 pt-3">[MỚI - ĐỪNG BỎ LỠ] Bộ sưu tập mới nhất của Mimish là về "hoa thật", "thiên nhiên" và một số loại "giấy bó hoa độc đáo", trong khi luôn cố gắng giữ cho nguồn gốc tinh túy của thương hiệu của chúng tôi với một nhà thiết kế hợp tác từ Anh Quốc đầy cảm hứng ở mọi góc độ...</p>
+      </div>
+      <div class="col-md-6 col-lg-4 py-3">
+        <h5 class="fw-bold">Thời Gian Hoạt Động</h5>
+        <h5>Tất cả các ngày trong tuần</h5>
+        <p class="fw-bold">Thứ 2 - Thứ 6: <br>
+          7:00 AM - 9:00 PM <br>
+          Thứ 7 - Chủ Nhật: <br>
+          11:00 AM - 10:00 PM</p>
+      </div>
+      <div class="col-md-6 col-lg-3 py-3">
+        <h5 class="fw-bold">Tìm Kiếm Chúng Tôi Tại...</h5>
+        <div class="footer-social d-flex justify-content-between"> <a href="" class="text-primary hvr-grow" style="text-decoration: none">
+          <h5>Facebook</h5>
+          </a> <a href="" class="text-primary hvr-grow" style="text-decoration: none">
+          <h5>Instagram</h5>
+          </a> <a href="" class="text-primary hvr-grow" style="text-decoration: none">
+          <h5>Tiktok</h5>
+          </a> </div>
+        <p>Tòa nhà Mimish - Số 195 Pasteur, Quận 1, TP.HCM <br>
+          info@mimishvietnam.com <br>
+          1-800-1234-567 <br>
+          +84 987-195-284</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid row">
+    <hr class="border-2 border-primary text-white-50 w-100">
+  </div>
+  <div class="container-fluid row text-center">
+    <p>Copyright © 2022 mimish. | Powered by mimish Inc.</p>
+  </div>
+</footer>
+<script src="js/shop.js"></script> 
+<script src="js/bootstrap.bundle.js"></script> 
+<script src="js/owl.carousel.js"></script>
+</body>
+<!-- InstanceEnd --></html>

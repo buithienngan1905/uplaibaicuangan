@@ -1,0 +1,298 @@
+@charset "utf-8";
+/* CSS Document */
+.navbar{
+    padding-top: 0!important;
+}
+.carousel .banner-background{
+    top:0;
+    
+}
+.carousel .banner-content{
+    bottom:0;
+    
+}
+
+.store-head-1{background-image: url("../img/store-01.jpg");
+    border-radius:15px;
+    
+    height: 25vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;}
+.store-head-2{background-image: url("../img/store-02.jpg");
+    border-radius:15px;
+    height: 25vh;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;}
+.store-head-3{background-image: url("../img/store-03.jpg");   
+    
+    border-radius:15px;
+    height: 25vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;}
+
+.head-bg{
+    background-image: url("../img/mimish-blackwhite-phone.jpg");
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    top:0;
+    background-repeat: no-repeat;
+}
+footer{
+    z-index:-999999;
+    position: relative;
+    marin-top: -60px!important;
+}
+.navbar{
+    top: 20px;
+}
+.navbar-brand img{
+    width: 60%;
+    padding: 0!important;
+}
+.justify-self-end{
+    justify-content: flex-end;
+}
+.bottom-logo img{
+        width: 20%;
+}
+.section-4{
+    z-index:999;
+    bottom: -50px;
+    left:0;
+    }
+
+
+/*
+footer{
+    position: relative;
+    bottom: 30px!important;
+    left:0;
+    }
+*/
+
+.product-box img{
+        overflow: hidden!important;
+    }
+@media (max-width: 576px) {    
+    .carousel-control-prev{
+        display:none;
+    }
+    .gridview2{
+        display: none!important;
+    }
+
+    .carousel-control-next{
+        display:none;
+    }
+    .navbar-nav{
+        text-align:center;
+    }
+      .navbar-brand img{
+        width: 40%!important;
+    }
+    .navbar > .container{
+        justify-content: center;
+    }
+    .navbar > .container > .navbar-brand{
+        justify-content:center!important;
+    }
+}
+@media (min-width: 768px) {
+  .navbar-nav{text-align:center;}
+    .navbar-brand img{
+        width: 40%!important;
+  }
+    .gridview2{
+    grid-template-columns: auto auto auto!important;
+    grid-template-rows: 10vh 10vh 10vh!important;
+    grid-gap: 5px!important;
+}
+
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+
+.grid1{
+    background-image: url("../img/whatnew-04.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35vh;
+    border-radius:15px;
+}
+.grid2{
+    background-image: url("../img/whatnew-02.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    height: 35vh;
+    border-radius:15px;
+}
+.grid3{
+    background-image: url("../img/whatnew-05.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35vh;
+    border-radius:15px;
+}
+.grid4{
+    background-image: url("../img/whatnew-06.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35vh;
+    border-radius:15px;
+}
+.grid5{
+    background-image: url("../img/whatnew-01.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35vh;
+    border-radius:15px;
+}
+.grid6{
+    background-image: url("../img/whatnew-03.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35vh;
+    border-radius:15px;
+}
+.grid7{
+    background-image: url("../img/whatnew-07.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 35vh;
+    border-radius:15px;
+}
+
+.events{
+        background-image: url("../img/events-01.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+        border-radius:15px;
+
+}
+.events2{
+        background-image: url("../img/events-02.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    border-radius:15px;
+}
+/*
+.section-2{
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+*/
+
+/*
+.section-2 .section-3 .section-4{ 
+  z-index:10;
+  top: -15px;
+  display: grid;
+}
+*/
+.section-2 .container{
+  justify-self: center;
+  align-self: center;
+}
+.section-3 .container{
+  justify-self: center;
+  align-self: center;
+}
+.section-4 .container{
+  justify-self: center;
+  align-self: center;
+}
+.middle-bg-1{
+    bottom: -400px;
+    left:0;
+    position: absolute;
+    z-index: -5;
+    background-image: url("../img/section-bg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+.middle-bg-2{
+    bottom: -425px;
+    left:0;
+    position: absolute;
+    z-index: -5;
+    background-image: url("../img/section-bg-2.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+.about-us-bg{
+    background-image:url("../img/about2.png");
+    background-size:25%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.about-us-1{
+    background-image:url("../img/about.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.grid-text{
+    bottom:0;
+    left: 0;
+    background-color: rgba(228,228,228,0);
+    color:white;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.grid1:hover .grid-text
+{      visibility: visible;
+    opacity:1;
+}
+.grid2:hover .grid-text
+{      visibility: visible;
+    opacity:1;
+}
+.grid3:hover .grid-text
+{      visibility: visible;
+    opacity:1;
+}
+.grid4:hover .grid-text
+{      visibility: visible;
+    opacity:1;
+}
+.grid5:hover .grid-text
+{      visibility: visible;
+    opacity:1;
+}
+.grid6:hover .grid-text
+{      visibility: visible;
+    opacity:1;
+}
+.grid7:hover .grid-text
+{      visibility: visible;
+    opacity:1;
+}
+.special-girl{
+    z-index: 999;
+}
+
